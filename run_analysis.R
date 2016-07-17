@@ -29,7 +29,6 @@
   train_labels_descrip$Type<-sub("GravityAcc","GravitationalMotionMeasuredByAccelerometer",train_labels_descrip$Type)
   train_labels_descrip$Type<-sub("BodyAccJerk","BodyMotionJerkSignalMeasuredByAccelerometer",train_labels_descrip$Type)
   train_labels_descrip$Type<-sub("BodyGyro","BodyMotionMeasuredByGyroscope",train_labels_descrip$Type)
-  train_labels_descrip$Type<-sub("BodyAcc","BodyMotionMeasuredByAccelerometer",train_labels_descrip$Type)
   train_labels_descrip$Type<-sub("Mag","Magnitude",train_labels_descrip$Type)
   train_labels_descrip$Type<-sub("mean\\(\\)","Mean",train_labels_descrip$Type)
   train_labels_descrip$Type<-sub("meanFreq\\(\\)","MeanFrequency",train_labels_descrip$Type)
