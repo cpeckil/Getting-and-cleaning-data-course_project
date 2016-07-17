@@ -22,6 +22,7 @@ A description of how the data was collected can be found in Readmeoriginal.txt
 Code Book
 - See features_info.txt for a description of the original variables used to create this tidy data set. 
 - The variable names found in features.txt were transformed as follows:
+
   f at beginning of variable name = Frequency
 
   t at beginning of variable name = Time
