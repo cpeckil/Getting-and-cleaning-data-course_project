@@ -39,11 +39,17 @@ Code Book
 - the variables contained in the tidy data set are:
 
 "Subject" = each of the 30 subjects numbered 1-30
+
 "Activity" = a description of the activity done by the subject
+
 "TimeBodyMotionMeasuredByAccelerometer-Mean-X" 
+
 ÒTimeBodyMotionMeasuredByAccelerometer-Mean-Y"
+
 ÒTimeBodyMotionMeasuredByAccelerometer-Mean-Z"
+
 "TimeBodyMotionMeasuredByAccelerometer-StdDev-X
+
 "TimeBodyMotionMeasuredByAccelerometer-StdDev-Y"
 "TimeBodyMotionMeasuredByAccelerometer-StdDev-Z"
 "TimeGravitationalMotionMeasuredByAccelerometer-Mean-X"
