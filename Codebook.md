@@ -23,16 +23,27 @@ Code Book
 - See features_info.txt for a description of the original variables used to create this tidy data set. 
 - The variable names found in features.txt were transformed as follows:
   f at beginning of variable name = Frequency
+
   t at beginning of variable name = Time
+
   BodyAcc = BodyMotionMeasuredByAccelerometer
+
   GravityAcc = GravitationalMotionMeasuredByAccelerometer
+
   BodyAccJerk = BodyMotionJerkSignalMeasuredByAccelerometer
+
   BodyGyro = BodyMotionMeasuredByGyroscope
+
   BodyAcc = BodyMotionMeasuredByAccelerometer
+
   Mag = Magnitude
+
   Mean()= Mean
+
   meanFreq()= MeanFrequency
+
   std() = StdDev
+
   tBody = TimeBody
 
 - Of the original 561 variables, only the measurements on the mean and standard deviation were included in this tidy data set.
