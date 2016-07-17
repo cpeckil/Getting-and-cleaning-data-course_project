@@ -43,13 +43,9 @@ Subject = each of the 30 subjects numbered 1-30
 Activity = a description of the activity done by the subject
 
 TimeBodyMotionMeasuredByAccelerometer-Mean-X 
-
 TimeBodyMotionMeasuredByAccelerometer-Mean-Y
-
 TimeBodyMotionMeasuredByAccelerometer-Mean-Z
-
 TimeBodyMotionMeasuredByAccelerometer-StdDev-X
-
 TimeBodyMotionMeasuredByAccelerometer-StdDev-Y
 TimeBodyMotionMeasuredByAccelerometer-StdDev-Z
 TimeGravitationalMotionMeasuredByAccelerometer-Mean-X
