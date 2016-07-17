@@ -37,6 +37,7 @@ Code Book
 
 - Of the original 561 variables, only the measurements on the mean and standard deviation were included in this tidy data set.
 - the variables contained in the tidy data set are:
+
 "Subject" = each of the 30 subjects numbered 1-30
 "Activity" = a description of the activity done by the subject
 "TimeBodyMotionMeasuredByAccelerometer-Mean-X" 
