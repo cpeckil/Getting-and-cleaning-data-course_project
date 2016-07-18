@@ -51,7 +51,7 @@
   train_activity_label<-merge(train_activity,activity_labels_descrip)
   test_activity_label<-merge(test_activity,activity_labels_descrip)
 
-  ## Set the activity variable in the train and test data frames to the Type field to provie a description of
+  ## Set the activity variable in the train and test data frames to the Type field to provide a description of
   ## the activity
   train$activity<-train_activity_label$Type
   test$activity<-test_activity_label$Type
@@ -59,7 +59,7 @@
   ## Combine the train and test data frames
   total<-rbind(train,test)
 
-  ## Create a data set with the average of each variable for each activity and subject
+  ## Create a data set with the mean of each variable for each activity and subject
   MeanOfTotalBySubjectAndActivity <-aggregate(total, by=list(total$subject,total$activity),FUN=mean)
   
   ## Remove the original subject and activity variables and update the variable names of the aggregated
