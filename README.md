@@ -12,7 +12,7 @@ Information used on the feature vector can be found in:
 
 An R script was created to create a tidy data set called mean_by_subject_activity.txt based on this data.  The script is called run_analysis.R and the codebook is called Codebook.md.
 
-Run_analysis.R was created to modify the original data sets and to create a tidy data set that contains the average of each variable for each activity. The R script is below along with documentation that describes what happens when the script is run.  Before running this script, you should download the zip file containing the raw data (see Codebook.md) and unzip the contents into a folder called ‘Data’ in your current working directory.
+Run_analysis.R was created to modify the original data sets and to create a tidy data set that contains the average of each variable for each activity. The R script is below along with documentation that describes what happens when the script is run.  Before running this script, you should download the zip file containing the raw data (see Codebook.md) and unzip the contents into a folder called “Data” in your current working directory.
 
 {
 
