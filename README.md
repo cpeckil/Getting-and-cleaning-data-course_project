@@ -16,8 +16,7 @@ Run_analysis.R was created to modify the original data sets and to create a tidy
 
 {
 
-  ## Read in the training data, training activities, subjects in the training data along with labels for the activities
-  ## and training/test data variable names
+  ## Read in the training data, training activities, subjects in the training data along with labels for the activities and training/test data variable names
 
   train<-read.table("./data/Samsung/UCI Har Dataset/train/X_train.txt")
   train_activity<-read.table("./data/Samsung/UCI Har Dataset/train/y_train.txt",sep='\t',col.names=c("Number"))
@@ -35,8 +34,7 @@ Run_analysis.R was created to modify the original data sets and to create a tidy
 
   library("tidyr")
   
-  ## Separate the variable in the activity_labels data frame into the number of the activity (Number) and
-  ## its description (Type)
+  ## Separate the variable in the activity_labels data frame into the number of the activity (Number) and its description (Type)
 
   activity_labels_descrip<-separate(activity_labels, activity, c("Number", "Type"), sep = 1)
   train_labels_descrip<-separate(train_labels,var_names,c("Number","Type"),sep=" ")
@@ -90,8 +88,7 @@ Run_analysis.R was created to modify the original data sets and to create a tidy
 
   test_activity_label<-merge(test_activity,activity_labels_descrip)
 
-  ## Set the activity variable in the train and test data frames to the Type field to provie a description of
-  ## the activity
+  ## Set the activity variable in the train and test data frames to the Type field to provie a description of the activity
 
   train$activity<-train_activity_label$Type
 
@@ -105,8 +102,7 @@ Run_analysis.R was created to modify the original data sets and to create a tidy
 
   MeanOfTotalBySubjectAndActivity <-aggregate(total, by=list(total$subject,total$activity),FUN=mean)
   
-  ## Remove the original subject and activity variables and update the variable names of the aggregated
-  ## Subject and Activity variables
+  ## Remove the original subject and activity variables and update the variable names of the aggregated Subject and Activity variables
 
   MeanOfTotalBySubjectAndActivity$subject<-NULL
 
