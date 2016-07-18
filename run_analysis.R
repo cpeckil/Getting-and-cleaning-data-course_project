@@ -33,7 +33,8 @@
   train_labels_descrip$Type<-sub("mean\\(\\)","Mean",train_labels_descrip$Type)
   train_labels_descrip$Type<-sub("meanFreq\\(\\)","MeanFrequency",train_labels_descrip$Type)
   train_labels_descrip$Type<-sub("std\\(\\)","StdDev",train_labels_descrip$Type)
-
+  train_labels_descrip$Type<-sub("tBody","TimeBody",train_labels_descrip$Type)
+  
   ## Set the column names in the train and test data frames to be the descriptive variable names from train_labels_descrip
   colnames(train)<-train_labels_descrip[,2]
   colnames(test)<-train_labels_descrip[,2]
