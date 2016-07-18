@@ -2,11 +2,15 @@ This project was based on the data described in:
 
 - Readmeoriginal.txt
 
-- features.txt: The original list of all features
+The original list of all features can be found here:
 
-- features_info.txt: shows information used on the feature vector.
+- features.txt 
 
-An R script was created to create a tidy data set based on this data.  The script is called run_analysis.R and the codebook is called Codebook.MD.
+Information used on the feature vector can be found in:
+
+- features_info.txt: 
+
+An R script was created to create a tidy data set based on this data.  The script is called run_analysis.R and the codebook is called Codebook.md.
 
 Run_analysis.R was created to modify the original data sets and to create a tidy data set that contains the average of each variable for each activity. The R script is below along with documentation that describes what happens when the script is run.
 
@@ -39,41 +43,57 @@ Run_analysis.R was created to modify the original data sets and to create a tidy
   ## Update the variable names to be more descriptive
 
   train_labels_descrip$Type<-sub("^f","Frequency",train_labels_descrip$Type)
+
   train_labels_descrip$Type<-sub("^t","Time",train_labels_descrip$Type)
+
   train_labels_descrip$Type<-sub("BodyAcc","BodyMotionMeasuredByAccelerometer",train_labels_descrip$Type)
+
   train_labels_descrip$Type<-sub("GravityAcc","GravitationalMotionMeasuredByAccelerometer",train_labels_descrip$Type)
+
   train_labels_descrip$Type<-sub("BodyAccJerk","BodyMotionJerkSignalMeasuredByAccelerometer",train_labels_descrip$Type)
+
   train_labels_descrip$Type<-sub("BodyGyro","BodyMotionMeasuredByGyroscope",train_labels_descrip$Type)
+
   train_labels_descrip$Type<-sub("BodyAcc","BodyMotionMeasuredByAccelerometer",train_labels_descrip$Type)
+
   train_labels_descrip$Type<-sub("Mag","Magnitude",train_labels_descrip$Type)
+
   train_labels_descrip$Type<-sub("mean\\(\\)","Mean",train_labels_descrip$Type)
+
   train_labels_descrip$Type<-sub("meanFreq\\(\\)","MeanFrequency",train_labels_descrip$Type)
+
   train_labels_descrip$Type<-sub("std\\(\\)","StdDev",train_labels_descrip$Type)
 
   ## Set the column names in the train and test data frames to be the descriptive variable names from train_labels_descrip
 
   colnames(train)<-train_labels_descrip[,2]
+
   colnames(test)<-train_labels_descrip[,2]
 
   ## Keep only the measurements on mean and standard deviaition
 
   train<-train[,grepl("Mean|Std",names(train))]
+
   test<-test[,grepl("Mean|Std",names(test))]
 
   ## Add the subject to the train and test data frames
 
   train$subject<-train_subject$V1
+
   test$subject<-test_subject$V1
 
   ## Merge the training / test activities wtih their labels to provide a description column
 
+
   train_activity_label<-merge(train_activity,activity_labels_descrip)
+
   test_activity_label<-merge(test_activity,activity_labels_descrip)
 
   ## Set the activity variable in the train and test data frames to the Type field to provie a description of
   ## the activity
 
   train$activity<-train_activity_label$Type
+
   test$activity<-test_activity_label$Type
 
   ## Combine the train and test data frames
@@ -88,8 +108,11 @@ Run_analysis.R was created to modify the original data sets and to create a tidy
   ## Subject and Activity variables
 
   MeanOfTotalBySubjectAndActivity$subject<-NULL
+
   MeanOfTotalBySubjectAndActivity$activity<-NULL
+
   colnames(MeanOfTotalBySubjectAndActivity)[1]<-"Subject"
+
   colnames(MeanOfTotalBySubjectAndActivity)[2]<-"Activity"
 
   ## Sort the data by the Subject and Activity variables
