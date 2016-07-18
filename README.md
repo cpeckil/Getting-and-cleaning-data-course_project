@@ -37,6 +37,7 @@ Run_analysis.R was created to modify the original data sets and to create a tidy
   ## Separate the variable in the activity_labels data frame into the number of the activity (Number) and its description (Type)
 
   activity_labels_descrip<-separate(activity_labels, activity, c("Number", "Type"), sep = 1)
+
   train_labels_descrip<-separate(train_labels,var_names,c("Number","Type"),sep=" ")
 
   ## Update the variable names to be more descriptive
