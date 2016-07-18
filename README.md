@@ -12,7 +12,7 @@ Information used on the feature vector can be found in:
 
 An R script was created to create a tidy data set called mean_by_subject_activity.txt based on this data.  The script is called run_analysis.R and the codebook is called Codebook.md.
 
-Run_analysis.R was created to modify the original data sets and to create a tidy data set that contains the average of each variable for each activity. The R script is below along with documentation that describes what happens when the script is run.
+Run_analysis.R was created to modify the original data sets and to create a tidy data set that contains the average of each variable for each activity. The R script is below along with documentation that describes what happens when the script is run.  Before running this script, you should download the zip file containing the raw data (see Codebook.md) and unzip the contents into a folder called ‘Data’ in your current working directory.
 
 {
 
@@ -89,7 +89,7 @@ Run_analysis.R was created to modify the original data sets and to create a tidy
 
   test_activity_label<-merge(test_activity,activity_labels_descrip)
 
-  ## Set the activity variable in the train and test data frames to the Type field to provie a description of the activity
+  ## Set the activity variable in the train and test data frames to the Type field to provide a description of the activity
 
   train$activity<-train_activity_label$Type
 
@@ -99,7 +99,7 @@ Run_analysis.R was created to modify the original data sets and to create a tidy
 
   total<-rbind(train,test)
 
-  ## Create a data set with the average of each variable for each activity and subject
+  ## Create a data set with the mean of each variable for each activity and subject
 
   MeanOfTotalBySubjectAndActivity <-aggregate(total, by=list(total$subject,total$activity),FUN=mean)
   
@@ -122,3 +122,4 @@ Run_analysis.R was created to modify the original data sets and to create a tidy
 
   }
 
+The output contains the mean of each of the mean and standard deviation variables from the training and test data sets, summarized by Activity and Type.
